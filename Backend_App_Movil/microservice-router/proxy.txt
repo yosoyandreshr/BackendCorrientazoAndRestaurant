@@ -1,0 +1,66 @@
+upstream corrientazo-ms-gateway {
+  server corrientazo-ms-gateway;
+}
+upstream corrientazo-ms-menus {
+  server corrientazo-ms-menus;
+}
+
+upstream corrientazo-ms-users {
+  server corrientazo-ms-users;
+}
+
+upstream corrientazo-ms-payments {
+  server corrientazo-ms-payments;
+}
+
+upstream corrientazo-ms-restaurants {
+  server corrientazo-ms-restaurants;
+}
+
+upstream corrientazo-ms-orders {
+  server corrientazo-ms-orders;
+}
+
+upstream corrientazo-ms-subscriptions {
+  server corrientazo-ms-subscriptions;
+}
+
+upstream corrientazo-ms-notifications {
+  server corrientazo-ms-notifications;
+}
+
+server {
+  listen        80;
+  server_name   pasantiaseam.org;
+
+        location /corrientazo/api/ms-gateway/ {
+          proxy_pass http://corrientazo-ms-gateway/api/ms-gateway/;
+        }
+
+        location /corrientazo/api/ms-menus/ {
+          proxy_pass http://corrientazo-ms-menus/api/ms-menus/;
+        }
+        location /corrientazo/api/ms-users/ {
+          proxy_pass http://corrientazo-ms-users/api/ms-users/;
+        }
+
+        location /corrientazo/api/ms-payments/ {
+          proxy_pass http://corrientazo-ms-payments/api/ms-payments/;
+        }
+
+        location /corrientazo/api/ms-restaurants/ {
+          proxy_pass http://corrientazo-ms-restaurants/api/ms-restaurants/;
+        }
+
+        location /corrientazo/api/ms-orders/ {
+          proxy_pass http://corrientazo-ms-orders/api/ms-orders/;
+        }
+
+        location /corrientazo/api/ms-subscriptions/ {
+          proxy_pass http://corrientazo-ms-subscriptions/api/ms-subscriptions/;
+        }
+
+        location /corrientazo/api/ms-notifications/ {
+          proxy_pass http://corrientazo-ms-notifications/api/ms-notifications/;
+        }
+}

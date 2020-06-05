@@ -1,0 +1,135 @@
+upstream easybuy-payment-ms {
+  server easybuy-payment-ms;
+}
+upstream easybuy-category-ms {
+  server  easybuy-category-ms;
+}
+upstream easybuy-offer-ms {
+  server  easybuy-offer-ms;
+}
+upstream easybuy-marketplace-gateway-ms {
+  server  easybuy-marketplace-gateway-ms;
+}
+upstream easybuy-notification-ms {
+  server  easybuy-notification-ms;
+}
+upstream easybuy-user-ms {
+  server  easybuy-user-ms;
+}
+
+upstream crowdlending-colfunding-gateway-ms {
+  server  crowdlending-colfunding-gateway-ms;
+}
+upstream crowdlending-project-ms {
+  server  crowdlending-project-ms;
+} 
+upstream crowdlending-notifications-ms {
+    server  crowdlending-notifications-ms;
+}
+upstream crowdlending-investments-ms {
+  server  crowdlending-investments-ms;
+} 
+upstream crowdlending-user-ms {
+  server crowdlending-user-ms;
+}
+upstream crowdlending-payment-ms {
+  server  crowdlending-payment-ms;
+}
+
+
+upstream corrientazo-ms-gateway {
+  server corrientazo-ms-gateway;
+}
+upstream corrientazo-ms-menus {
+  server corrientazo-ms-menus;
+}
+upstream corrientazo-ms-users {
+  server corrientazo-ms-users;
+}
+upstream corrientazo-ms-payments {
+  server corrientazo-ms-payments;
+}
+upstream corrientazo-ms-restaurants {
+  server corrientazo-ms-restaurants;
+}
+upstream corrientazo-ms-orders {
+  server corrientazo-ms-orders;
+}
+upstream corrientazo-ms-subscriptions {
+  server corrientazo-ms-subscriptions;
+}
+upstream corrientazo-ms-notifications {
+  server corrientazo-ms-notifications;
+}
+
+
+server {
+  listen        80;
+  server_name   rappimakersena.org;
+
+  location /easybuy/api/offer-ms/ {
+    proxy_pass http://easybuy-offer-ms/api/offer-ms/;
+  }
+  location /easybuy/api/payment-ms/ {
+    proxy_pass http://easybuy-payment-ms/api/payment-ms/;
+  }
+  location /easybuy/api/marketplace-gateway-ms/ {
+    proxy_pass http://easybuy-marketplace-gateway-ms/api/marketplace-gateway-ms/;
+  }
+  location /easybuy/api/notification-ms/ {
+    proxy_pass http://easybuy-notification-ms/api/notification-ms/;
+  }
+  location /easybuy/api/user-ms/ {
+    proxy_pass http://easybuy-user-ms/api/user-ms/;
+  }
+  location /easybuy/api/category-ms/ {
+    proxy_pass http://easybuy-category-ms/api/category-ms/;
+  }
+
+
+  location /crowdlending/api/project-ms/ {
+    proxy_pass http://crowdlending-project-ms/api/project-ms/;
+  }
+  location /crowdlending/api/notifications-ms/ {
+    proxy_pass http://crowdlending-notifications-ms/api/notifications-ms/;
+  }
+  location /crowdlending/api/investments-ms/ {
+    proxy_pass http://crowdlending-investments-ms/api/investments-ms/;
+  }
+  location /crowdlending/api/user-ms/ {
+    proxy_pass http://crowdlending-user-ms/api/user-ms/;
+  }
+  location /crowdlending/api/payment-ms/ {
+    proxy_pass http://crowdlending-payment-ms/api/payment-ms/;
+  }
+  
+  location /crowdlending/api/colfunding-gateway-ms/ {
+    proxy_pass http://crowdlending-colfunding-gateway-ms/api/colfunding-gateway-ms/;
+  }
+
+
+  location /corrientazo/api/ms-gateway/ {
+    proxy_pass http://corrientazo-ms-gateway/api/ms-gateway/;
+  }
+  location /corrientazo/api/ms-menus/ {
+    proxy_pass http://corrientazo-ms-menus/api/ms-menus/;
+  }
+  location /corrientazo/api/ms-users/ {
+    proxy_pass http://corrientazo-ms-users/api/ms-users/;
+  }
+  location /corrientazo/api/ms-payments/ {
+    proxy_pass http://corrientazo-ms-payments/api/ms-payments/;
+  }
+  location /corrientazo/api/ms-restaurants/ {
+    proxy_pass http://corrientazo-ms-restaurants/api/ms-restaurants/;
+  }
+  location /corrientazo/api/ms-orders/ {
+    proxy_pass http://corrientazo-ms-orders/api/ms-orders/;
+  }
+  location /corrientazo/api/ms-subscriptions/ {
+    proxy_pass http://corrientazo-ms-subscriptions/api/ms-subscriptions/;
+  }
+  location /corrientazo/api/ms-notifications/ {
+    proxy_pass http://corrientazo-ms-notifications/api/ms-notifications/;
+  }
+}

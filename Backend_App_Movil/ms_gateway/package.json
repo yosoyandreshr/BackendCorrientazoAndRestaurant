@@ -1,0 +1,36 @@
+{
+  "name": "ms_gateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.11.0",
+    "async": "^3.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "log4js": "^6.1.0",
+    "morgan": "^1.9.1",
+    "njwt": "^1.0.0",
+    "node-gcm": "^1.0.2",
+    "node-gcm-service": "^0.2.8",
+    "nodemon": "^2.0.2",
+    "pg": "^7.17.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "run": "^1.4.0",
+    "split": "^1.0.1",
+    "test": "^0.6.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "nyc": "^15.0.0"
+  }
+}

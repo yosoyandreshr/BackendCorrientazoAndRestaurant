@@ -1,0 +1,42 @@
+{
+  "name": "ms_users",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha test**/**/**/*Test.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.11.0",
+    "async": "^3.1.1",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.20.9",
+    "log4js": "^6.1.0",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.4.2",
+    "pg": "^7.18.1",
+    "request": "^2.88.2",
+    "run": "^1.4.0",
+    "test": "^0.6.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "apidoc": "^0.19.1",
+    "apidocjs-markdown": "^0.2.2",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "mocha": "^3.5.3",
+    "nodemon": "^2.0.2",
+    "nyc": "^15.0.0"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "ms_orders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha tests/**/**/**/*Test.js --exit",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.1.1",
+    "async": "^2.6.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.2",
+    "faker": "^4.1.0",
+    "knex": "^0.20.4",
+    "log4js": "^3.0.6",
+    "mock-knex": "^0.4.0",
+    "moment-timezone": "^0.5.23",
+    "morgan": "^1.9.1",
+    "node-gcm": "^1.0.2",
+    "pg": "^7.15.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "run": "^1.4.0",
+    "test": "^0.6.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "apidoc": "^0.17.6",
+    "apidocjs-markdown": "^0.2.2",
+    "chai": "^4.1.2",
+    "chai-http": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
+    "nyc": "^14.1.1"
+  }
+}
